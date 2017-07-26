@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<p><a href="/travels">Home</a></p>
+<p><a href="/logout">Logout</a></p>
+
+<h2>Add a trip:</h2>
+
+    <form action="/travels/process_destination" method="POST">
+        {% csrf_token %}
+        Destination: <input type="text" size="45" name="destination">
+        Plan: <input type="text" size="45" name="plan">
+        From: <input type="date" size="45" name="start">
+        To: <input type="date" size="45" name="end">
+        <input type="submit" value="Add">
+    </form>
+
+</body>
+</html>
